@@ -1,0 +1,193 @@
+/* General Styles & Theme Variables (No Orange, Rich Coffee & Cream Theme) */
+:root {
+    --bg-color: #f7f3ec;
+    --text-color: #2c221e;
+    --card-bg: #ffffff;
+    --primary-color: #4a2e1b;       /* Rich Deep Coffee Brown */
+    --secondary-color: #8c6239;     /* Warm Medium Brown */
+    --accent-color: #c29b61;        /* Soft Gold/Cream Accent */
+    --border-color: #d8c9bc;
+}
+
+body.dark-mode {
+    --bg-color: #16120f;
+    --text-color: #f2ece4;
+    --card-bg: #231b17;
+    --primary-color: #d4a373;
+    --secondary-color: #8c6239;
+    --border-color: #3d3028;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    position: relative;
+    border-bottom: 4px solid var(--accent-color);
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.cafe-logo {
+    font-size: 2.2rem;
+    background: var(--accent-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.theme-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 15px;
+    background: var(--accent-color);
+    color: #2c221e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 25px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Status Banner */
+#status-banner {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 12px auto 0 auto;
+    padding: 8px;
+    border-radius: 5px;
+    max-width: 300px;
+}
+
+/* About Section & Images */
+.about-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cafe-img {
+    width: 260px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+article p.extra-text {
+    display: none;
+}
+.read-more-btn {
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 7px 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+/* Menu Filter & Table with Thumbnails */
+.filter-buttons {
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+}
+.filter-btn {
+    padding: 6px 14px;
+    cursor: pointer;
+    border: 1px solid var(--secondary-color);
+    background: transparent;
+    color: var(--text-color);
+    border-radius: 4px;
+    font-weight: 600;
+}
+.filter-btn.active {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.menu-thumb {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+th {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+input, textarea {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+button[type="submit"] {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+}
