@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cozy Corner Cafe</title>
+    <!-- CSS file link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Task 3: Theme / Style Switcher Button & Logo -->
+    <header>
+        <button class="theme-btn" id="theme-toggle">Toggle Light/Dark Mode</button>
+        <div class="logo-container">
+            <div class="cafe-logo">☕</div>
+            <h1>The Cozy Corner Cafe</h1>
+        </div>
+        <!-- Task 8: Dynamic Opening Status -->
+        <div id="status-banner">Loading status...</div>
+    </header>
+
+    <div class="container">
+        <!-- Task 6: Read More Toggle Article with Local Image -->
+        <section>
+            <h2>About Our Cafe</h2>
+            <div class="about-content">
+                <img src="cafe-interior.jpg" alt="Cafe Interior" class="cafe-img">
+                <article id="about-article">
+                    <p>Welcome to The Cozy Corner Cafe, where every cup tells a story. We serve the finest artisan coffee and freshly baked pastries crafted with love every single day. <span class="extra-text">Founded in 2020, our mission has always been to provide a warm, welcoming space for friends, students, and book lovers to gather and relax. Come try our signature blends and experience true comfort!</span></p>
+                    <button class="read-more-btn" id="read-more-toggle">Read More</button>
+                </article>
+            </div>
+        </section>
+
+        <hr style="margin: 30px 0; border: 0; border-top: 1px solid var(--border-color);">
+
+        <!-- Task 7 & Task 2: Live Category Filter & Table Row Highlighting -->
+        <section>
+            <h2>Our Menu & Order Calculator</h2>
+            
+            <!-- Task 7: Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="drinks">Drinks</button>
+                <button class="filter-btn" data-category="pastries">Pastries</button>
+            </div>
+
+            <table id="menu-table">
+                <thead>
+                    <tr>
+                        <th>Select</th>
+                        <th>Item Preview</th>
+                        <th>Item Name</th>
+                        <th>Category</th>
+                        <th>Price ($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-category="drinks">
+                        <td><input type="checkbox" class="item-select" data-price="3"></td>
+                        <td><img src="espresso.jpg" alt="Espresso" class="menu-thumb"></td>
+                        <td>Espresso</td>
+                        <td>Drinks</td>
+                        <td>$3</td>
+                    </tr>
+                    <tr data-category="drinks">
+                        <td><input type="checkbox" class="item-select" data-price="4"></td>
+                        <td><img src="cappuccino.jpg" alt="Cappuccino" class="menu-thumb"></td>
+                        <td>Cappuccino</td>
+                        <td>Drinks</td>
+                        <td>$4</td>
+                    </tr>
+                    <tr data-category="drinks">
+                        <td><input type="checkbox" class="item-select" data-price="4"></td>
+                        <td><img src="americano.jpg" alt="Americano" class="menu-thumb"></td>
+                        <td>Americano</td>
+                        <td>Drinks</td>
+                        <td>$6</td>
+                    </tr>
+                    <tr data-category="drinks">
+                        <td><input type="checkbox" class="item-select" data-price="4"></td>
+                        <td><img src="mocha.jpg" alt="Mocha" class="menu-thumb"></td>
+                        <td>Mocha</td>
+                        <td>Drinks</td>
+                        <td>$3</td>
+                    </tr>
+                    <tr data-category="pastries">
+                        <td><input type="checkbox" class="item-select" data-price="4"></td>
+                        <td><img src="croissant.jpg" alt="Croissant" class="menu-thumb"></td>
+                        <td>Croissant</td>
+                        <td>Pastries</td>
+                        <td>$4</td>
+                    </tr>
+                    <tr data-category="pastries">
+                        <td><input type="checkbox" class="item-select" data-price="5"></td>
+                        <td><img src="Blueberry muffin.jpg" alt="Blueberry Muffin" class="menu-thumb"></td>
+                        <td>Blueberry Muffin</td>
+                        <td>Pastries</td>
+                        <td>$5</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Task 4: Interactive Order Total Calculator -->
+            <h3>Total Price: <span id="total">$0</span></h3>
+        </section>
+
+        <hr style="margin: 30px 0; border: 0; border-top: 1px solid var(--border-color);">
+
+        <!-- Task 1, 5 & 9: Forms, Age Validation, Character Counter -->
+        <section>
+            <h2>Feedback & Special Request Form</h2>
+            <form id="feedback-form">
+                <input type="text" id="username" placeholder="Enter your username" required>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                
+                <!-- Task 5: Birth Year for Type Conversion Age Check -->
+                <input type="text" id="birth-year" placeholder="Enter your birth year (e.g., 2002)" required>
+                
+                <!-- Task 9: Character Counter Textarea -->
+                <textarea id="special-notes" maxlength="100" placeholder="Special order instructions (max 100 chars)..." rows="3"></textarea>
+                <small id="char-count" style="color: gray;">100 characters remaining</small>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+            <p id="form-message" style="margin-top: 15px; font-weight: bold;"></p>
+        </section>
+    </div>
+
+    <!-- JavaScript file link -->
+    <script src="script.js"></script>
+</body>
+</html>
